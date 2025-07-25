@@ -1,10 +1,11 @@
+#********************
+# StandIdle.gd
+#********************
 extends PlayerState
-
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.animation.play("Idle")
 	player.velocity.x = 0.0
-
 
 func physics_update(_delta: float) -> void:
 	player.velocity.y += player.gravity * _delta
