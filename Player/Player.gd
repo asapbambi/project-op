@@ -1,3 +1,6 @@
+#********************
+# Player.gd
+#********************
 # Character that moves and jumps.
 class_name Player extends CharacterBody2D
 
@@ -7,7 +10,8 @@ class_name Player extends CharacterBody2D
 @export var gravity := 3800.0
 ## Vertical speed applied when jumping.
 @export var jump_impulse := 1350.0
-
+## Track direction player is jumping or falling
+@export var jump_direction_x := 1
 
 @onready var fsm := $StateMachine
 @onready var label := $Label
